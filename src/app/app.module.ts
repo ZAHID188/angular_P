@@ -16,6 +16,7 @@ import { TemplateStatementsComponent } from './template-statements/template-stat
 import { PipesComponent } from './pipes/pipes.component';
 import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
     helloworldComponent, ParentComponent, ChildComponent,
      ParentViewchildComponent, 
     ChildViewchildComponent, ParentNgcontentComponent, ChildNgcontentComponent,
-     TemplateStatementsComponent, PipesComponent, GreetingsPipePipe, PropertyBindingComponent  
+     TemplateStatementsComponent, PipesComponent, GreetingsPipePipe, PropertyBindingComponent, AttributeBindingComponent  
    
   ],
   imports: [

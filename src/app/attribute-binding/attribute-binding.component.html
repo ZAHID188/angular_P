@@ -1,0 +1,100 @@
+<p>attribute-binding </p>
+<!-- <p [attr.attribute you are targeting]="expression"></p> -->
+<table border="4">
+
+    <tr>
+        <td [attr.colspan]="1+1">   <!--colspan is an attribute  || colSpan is property--> 
+            This is a td
+        </td>
+        <td>
+            This is a td
+        </td>   
+    </tr>
+    <tr>
+        <td>
+            This is a td
+        </td>
+        <td>
+            This is a td
+        </td>
+        <td>
+            This is a td
+        </td>
+    </tr>
+</table>
+
+
+<!--  class binding if onsale returns false sale class don't work-->
+<style>
+    .sale{
+        text-align: center;
+        background-color: blue ;
+    }
+     .class1{
+         background-color: aqua;
+
+        }
+        .class2{
+         text-align: center;
+
+        }
+        .width{
+            /* background-color: rgb(231, 13, 13); */
+            width: 20px;
+
+        }
+    
+</style>
+<div [class.sale]="OnSale">
+ Class binding
+</div>
+
+<div [class]="'class1 class2'">
+    multiple Class binding (string of class names)
+   </div>
+
+   <div [class]="{
+    class1:false,
+    class2:true
+   }">
+    multiple Class binding (object with class names)
+   </div>
+
+   <div [class]="['class1','class2']">
+    multiple Class binding (array with class names)
+   </div>
+
+
+   <div [style.width]="width">
+    style binding
+   </div>
+   
+   <div [style.background-color]="color">
+       style binding (expression)
+      </div>
+   <div [style.backgroundColor]="color">
+    style binding (expression)
+    </div>
+   
+      <div  
+      [style]="'background-color:green;text-align:right'">
+       multiple Style binding (string list style )
+      </div>
+   
+      <div
+      [style]="{ 
+          width:'50px',
+          height:'50px',
+          background:'yellow'
+        }">
+        multiple style binding (object with style names)
+       </div>
+
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+       <br>
+      <div> array binding don't work with the style</div>
