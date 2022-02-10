@@ -22,6 +22,13 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingsComponent } from './two-way-bindings/two-way-bindings.component';
 import { TemplateVariablesComponent } from './template-variables/template-variables.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { AttributeDirective } from './directives/Attribute.directive';
+import { CustomDirectiveDirective } from './directives/custom-directive.directive';
+import { DependencyInjectionComponent } from './dependency-injection/dependency-injection.component';
+import { LogService } from './dependency-injection/log.service';
+import { RoutingComponent } from './routing/routing.component';
+import { RoutingFirstComponent } from './routing-first/routing-first.component';
+import { RoutingSecondComponent } from './routing-second/routing-second.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,9 @@ import { DirectivesComponent } from './directives/directives.component';
     ChildViewchildComponent, ParentNgcontentComponent, ChildNgcontentComponent,
     TemplateStatementsComponent, PipesComponent, GreetingsPipePipe,
     PropertyBindingComponent, AttributeBindingComponent,
-    EventBindingComponent, TwoWayBindingsComponent, TemplateVariablesComponent, DirectivesComponent
+    EventBindingComponent, TwoWayBindingsComponent, 
+    TemplateVariablesComponent, 
+    DirectivesComponent,AttributeDirective, CustomDirectiveDirective, DependencyInjectionComponent, RoutingComponent, RoutingFirstComponent, RoutingSecondComponent
    
   ],
   imports: [
@@ -41,7 +50,7 @@ import { DirectivesComponent } from './directives/directives.component';
     NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
