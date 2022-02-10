@@ -1,0 +1,7 @@
+<p>template-variables </p>
+<input #phone placeholder="Phone"> 
+<button (click)= "callPhone(phone.value)"> call </button>
+
+
+<input #ref1 type="text" [(ngModel)]="firstExample">
+<span *ngIf="true">{{ref1.value}}</span>

@@ -1,0 +1,9 @@
+<p>two-way-bindings </p>
+
+<div>
+    <button (click)="dec()">-</button>
+    <button (click)="inc()">+</button>  
+    <label [style.font-size.px] ="size"> 
+        Font size: {{ size }} px
+    </label> 
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,10 @@ import { PipesComponent } from './pipes/pipes.component';
 import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { AttributeBindingComponent } from './attribute-binding/attribute-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TwoWayBindingsComponent } from './two-way-bindings/two-way-bindings.component';
+import { TemplateVariablesComponent } from './template-variables/template-variables.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +30,16 @@ import { AttributeBindingComponent } from './attribute-binding/attribute-binding
     helloworldComponent, ParentComponent, ChildComponent,
      ParentViewchildComponent, 
     ChildViewchildComponent, ParentNgcontentComponent, ChildNgcontentComponent,
-     TemplateStatementsComponent, PipesComponent, GreetingsPipePipe, PropertyBindingComponent, AttributeBindingComponent  
+    TemplateStatementsComponent, PipesComponent, GreetingsPipePipe,
+    PropertyBindingComponent, AttributeBindingComponent,
+    EventBindingComponent, TwoWayBindingsComponent, TemplateVariablesComponent, DirectivesComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

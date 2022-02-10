@@ -15,6 +15,16 @@ export class AppComponent{
       return b;
     }
 
+    deleteThis(item){
+
+        console.log(item)
+    }
+
+    fontsizepx=16;
+    fontSizepx=20;
+
+  
+
 }
 
 
