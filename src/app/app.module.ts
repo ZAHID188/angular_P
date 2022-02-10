@@ -29,6 +29,10 @@ import { LogService } from './dependency-injection/log.service';
 import { RoutingComponent } from './routing/routing.component';
 import { RoutingFirstComponent } from './routing-first/routing-first.component';
 import { RoutingSecondComponent } from './routing-second/routing-second.component';
+import { AppRoutingModule2 } from './routing/routing.module';
+import { RoutingChildAComponent } from './routing-child-a/routing-child-a.component';
+import { RoutingChildBComponent } from './routing-child-b/routing-child-b.component';
+
 
 @NgModule({
   declarations: [
@@ -41,14 +45,15 @@ import { RoutingSecondComponent } from './routing-second/routing-second.componen
     PropertyBindingComponent, AttributeBindingComponent,
     EventBindingComponent, TwoWayBindingsComponent, 
     TemplateVariablesComponent, 
-    DirectivesComponent,AttributeDirective, CustomDirectiveDirective, DependencyInjectionComponent, RoutingComponent, RoutingFirstComponent, RoutingSecondComponent
+    DirectivesComponent,AttributeDirective, CustomDirectiveDirective, DependencyInjectionComponent, RoutingComponent, RoutingFirstComponent, RoutingSecondComponent, RoutingChildAComponent, RoutingChildBComponent
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule2
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
