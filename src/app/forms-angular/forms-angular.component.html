@@ -1,0 +1,98 @@
+<h3>Template Driven Forms</h3>
+<p>{{model | json}}</p>
+
+<div [hidden]="submitted">
+<form #petForm="ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="model.name" name="name" required> 
+
+    </div>
+    <label for="specie">Species</label>
+    <select id="specie" [(ngModel)]="model.specie" name="specie" required>
+        <option *ngFor="let sp of species" [value]="sp">{{sp}}</option>
+    </select>
+    <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+</form>
+
+</div>
+
+
+<div [hidden]="!submitted">
+    You Have submitted:
+    <br>
+    <p>Name= {{model.name}}
+        <br>
+        Species= {{model.specie}}
+    </p>
+    <button (click)="submitted=false">Edit</button>
+    
+</div>
+
+
+
+<div>
+    <h3>Template Driven Forms</h3>
+</div>
+<label for="name"> Name</label>
+<input id="name" type="text" [formControl]="name">
+<p>value = {{name.value}}</p>
+<button (click)="UpdateName()"> Update</button>
+
+<br>
+<h4>FormGroup</h4>
+<form [formGroup]="profileitem" (ngSubmit)="onsubmit2()">
+    <label for="first-name">First Name</label>
+    <input id="first-name" type="text" formControlName="FirstName">
+    <label for="Last-name">Last Name</label>
+    <input id="Last-name" type="text" formControlName="LastName">
+    <br>
+    <button type="submit" [disabled]="!profileitem.valid">Submit</button>
+
+</form>
+
+
+<!-- 
+<h4>Form Validation</h4>
+<form>
+    <input 
+    type="text" 
+    name="name" 
+    required minlength="4" 
+    [(ngModel)]="nameInput" 
+    #name="ngModel">
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf= "name.errors?.['required']">
+                name is required
+        </div>
+        <div *ngIf= "name.errors?.['minlength']">
+            name must be 4 char
+    </div>
+
+    </div>
+
+</form> -->
+
+            <!-- Reactive Form validation-->
+
+<!-- <br><br>
+<form [formGroup]="FormValidation">
+    <input 
+    type="text" 
+    name="name" 
+    required 
+    minlength="5" 
+    formControlName="name">
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div *ngIf= "name.errors?.['required']">
+                name is required
+        </div>
+        <div *ngIf= "name.errors?.['minlength']">
+            name must be 4 char
+        </div>
+
+    </div> 
+
+</form> -->

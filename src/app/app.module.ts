@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +32,10 @@ import { RoutingSecondComponent } from './routing-second/routing-second.componen
 import { AppRoutingModule2 } from './routing/routing.module';
 import { RoutingChildAComponent } from './routing-child-a/routing-child-a.component';
 import { RoutingChildBComponent } from './routing-child-b/routing-child-b.component';
+import { FormsAngularComponent } from './forms-angular/forms-angular.component';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -45,7 +49,11 @@ import { RoutingChildBComponent } from './routing-child-b/routing-child-b.compon
     PropertyBindingComponent, AttributeBindingComponent,
     EventBindingComponent, TwoWayBindingsComponent, 
     TemplateVariablesComponent, 
-    DirectivesComponent,AttributeDirective, CustomDirectiveDirective, DependencyInjectionComponent, RoutingComponent, RoutingFirstComponent, RoutingSecondComponent, RoutingChildAComponent, RoutingChildBComponent
+    DirectivesComponent,AttributeDirective, CustomDirectiveDirective,
+     DependencyInjectionComponent, 
+     RoutingComponent, RoutingFirstComponent, 
+     RoutingSecondComponent, RoutingChildAComponent, 
+     RoutingChildBComponent, FormsAngularComponent, HttpclientComponent
    
   ],
   imports: [
@@ -53,7 +61,11 @@ import { RoutingChildBComponent } from './routing-child-b/routing-child-b.compon
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    AppRoutingModule2
+    AppRoutingModule2,
+    ReactiveFormsModule,
+    HttpClientModule
+    
+    
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
