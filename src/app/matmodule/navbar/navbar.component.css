@@ -1,0 +1,13 @@
+.fix{
+    margin-top: -10px;
+    margin-top: 0px;
+    background-color: rgb(36, 47, 47);
+}
+
+.navbar{
+    justify-content: space-between;
+}
+
+span{
+    padding-right: 1rem;
+}

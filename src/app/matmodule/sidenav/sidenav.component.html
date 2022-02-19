@@ -1,0 +1,16 @@
+<mat-sidenav-container> <!-- #sideNavZahid is a variable can be call later-->
+    <mat-sidenav #sideNavZahid [(opened)]="opennav" mode="side" (opened)="log('nav opened')" (closed)="log('nav closed')">    <!--It's  the sidenav  mode=push,over,side (defualt mode=over)-->
+        Sidenav
+    </mat-sidenav>
+    <mat-sidenav-content>   <!--It's  the body-->
+        Main
+        <button (click)="opennav=!opennav">Toggle opened</button>
+        <button (click)="sideNavZahid.open()">Open using Var</button>
+        <button (click)="sideNavZahid.close()">Close using Var</button>
+        <button (click)="sideNavZahid.toggle()">Toggle</button>
+
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+

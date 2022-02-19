@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { MaterialmoduleModule } from '../materialmodule.module';
 import { MatmoduleComponent } from './matmodule.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 @NgModule({
-  declarations: [MatmoduleComponent],
+  declarations: [MatmoduleComponent, NavbarComponent, SidenavComponent],
   imports: [
-    MatMenuModule
+    MatMenuModule,
+    MaterialmoduleModule
     
   ],
-  exports:[MatmoduleComponent]
+  exports:[MatmoduleComponent,NavbarComponent,SidenavComponent]
 })
 export class MatmoduleModule { }
