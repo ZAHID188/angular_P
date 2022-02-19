@@ -35,6 +35,9 @@ import { RoutingChildBComponent } from './routing-child-b/routing-child-b.compon
 import { FormsAngularComponent } from './forms-angular/forms-angular.component';
 import { HttpclientComponent } from './httpclient/httpclient.component';
 import {HttpClientModule} from '@angular/common/http';
+import { MatmoduleComponent } from './matmodule/matmodule.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatmoduleModule } from './matmodule/matmodule.module';
 
 
 
@@ -53,7 +56,8 @@ import {HttpClientModule} from '@angular/common/http';
      DependencyInjectionComponent, 
      RoutingComponent, RoutingFirstComponent, 
      RoutingSecondComponent, RoutingChildAComponent, 
-     RoutingChildBComponent, FormsAngularComponent, HttpclientComponent
+     RoutingChildBComponent, FormsAngularComponent, HttpclientComponent,
+      
    
   ],
   imports: [
@@ -63,7 +67,9 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     AppRoutingModule2,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatmoduleModule
     
     
   ],
