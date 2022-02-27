@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-udemy-forms-less',
@@ -10,6 +11,10 @@ export class UdemyFormsLessComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  OnSubmit(form:NgForm){
+console.log(form)
   }
 
 }
