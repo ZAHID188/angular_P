@@ -32,12 +32,14 @@ import { RoutingSecondComponent } from './routing-second/routing-second.componen
 import { AppRoutingModule2 } from './routing/routing.module';
 import { RoutingChildAComponent } from './routing-child-a/routing-child-a.component';
 import { RoutingChildBComponent } from './routing-child-b/routing-child-b.component';
-import { FormsAngularComponent } from './forms-angular/forms-angular.component';
 import { HttpclientComponent } from './httpclient/httpclient.component';
 import {HttpClientModule} from '@angular/common/http';
 import { MatmoduleComponent } from './matmodule/matmodule.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatmoduleModule } from './matmodule/matmodule.module';
+import { MattableComponent } from './mattable/mattable.component';
+import { MattableModules } from './mattable/mattable.module';
+import { FormsModuleModule } from './forms-angular/forms-module.module';
 
 
 
@@ -56,7 +58,7 @@ import { MatmoduleModule } from './matmodule/matmodule.module';
      DependencyInjectionComponent, 
      RoutingComponent, RoutingFirstComponent, 
      RoutingSecondComponent, RoutingChildAComponent, 
-     RoutingChildBComponent, FormsAngularComponent, HttpclientComponent,
+     RoutingChildBComponent, HttpclientComponent,
       
    
   ],
@@ -69,7 +71,9 @@ import { MatmoduleModule } from './matmodule/matmodule.module';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatmoduleModule
+    MatmoduleModule,
+    MattableModules,
+    FormsModuleModule
     
     
   ],
