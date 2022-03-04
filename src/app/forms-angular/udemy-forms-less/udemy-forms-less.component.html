@@ -1,17 +1,6 @@
 <p>udemy-forms-less works!</p>
-
-<!-- <form>
-    <label>Name</label>
-    <input type="text" name="name">
-    <br>
-    <label>Password </label>
-    <input type="password" name="password">
-    <br>
-    <button>submit</button>
-
-
-</form> -->
-
+<p>Please open one sector at a time and comment others</p>
+<!--
 <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
@@ -24,7 +13,51 @@
             <button class="btn btn-default" type="button">Suggest an Username</button>
             <div class="form-group">
               <label for="email">Mail</label>
-              <input type="email" id="email" class="form-control" name="email" ngModel>
+              <input  type="email" id="email" class="form-control" name="email" [ngModel]="ngmodelprop"> <!--property binding--
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="secret">Secret Questions</label>
+            <select id="secret" class="form-control" name="secret" ngModel>
+              <option value="pet">Your first Pet?</option>
+              <option value="teacher">Your first teacher?</option>
+            </select>
+          </div>
+          
+          <div>
+            <textarea name="txtar"
+            name="qsans"
+            rows="3"
+            [(ngModel)]="ans">  <!--two way binding--
+
+            </textarea>
+            <p> Your reply: {{ans}}</p>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <p>after clicking the submit check the console</p>
+        </form>
+      </div>
+    </div>
+  </div>
+-->
+
+<!-- grouping form control  -->
+
+<!-- <br><br>
+  <h1>Grouping Form control</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+          <div id="user-data" ngModelGroup="userInfo">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" name="username" ngModel>
+            </div>
+            <button class="btn btn-default" type="button">Suggest an Username</button>
+            <div class="form-group">
+              <label for="email">Mail</label>
+              <input  type="email" id="email" class="form-control" name="email" ngModel>
             </div>
           </div>
           <div class="form-group">
@@ -35,8 +68,91 @@
             </select>
           </div>
           <button class="btn btn-primary" type="submit">Submit</button>
+          <p>after clicking the submit check the console</p>
         </form>
       </div>
     </div>
+  </div> -->
+
+<!-- handling radio button  -->
+<!-- 
+<h1>handling radio button</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+          <div id="user-data" ngModelGroup="userInfo">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-control" name="username" ngModel>
+            </div>
+            <button class="btn btn-default" type="button">Suggest an Username</button>
+            <div class="form-group">
+              <label for="email">Mail</label>
+              <input  type="email" id="email" class="form-control" name="email" ngModel>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="secret">Secret Questions</label>
+            <select id="secret" class="form-control" name="secret" ngModel>
+              <option value="pet">Your first Pet?</option>
+              <option value="teacher">Your first teacher?</option>
+            </select>
+          </div>
+          <div class="radio" *ngFor="let gender of genders">
+            <label>
+              <input type="radio"
+              name="gender"
+              ngModel
+              [value]="gender">{{gender}}
+            </label>
+
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <p>after clicking the submit check the console</p>
+        </form>
+      </div>
+    </div>
+  </div>   -->
+
+
+  <!-- setting and patching  form values   -->
+<h1>setting and patching  form values</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" class="form-control" name="username" ngModel>
+          </div>
+          <button class="btn btn-default" type="button" (click)="suggestUserName()">Suggest an Username</button>
+          <div class="form-group">
+            <label for="email">Mail</label>
+            <input  type="email" id="email" class="form-control" name="email" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="secret">Secret Questions</label>
+          <select id="secret" class="form-control" name="secret" ngModel>
+            <option value="pet">Your first Pet?</option>
+            <option value="teacher">Your first teacher?</option>
+          </select>
+        </div>
+        <div class="radio" *ngFor="let gender of genders">
+          <label>
+            <input type="radio"
+            name="gender"
+            ngModel
+            [value]="gender">{{gender}}
+          </label>
+
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <p>after clicking the submit check the console</p>
+      </form>
+    </div>
   </div>
-  
+</div>  
+
